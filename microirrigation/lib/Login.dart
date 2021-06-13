@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:microirrigation/AuthenticationService.dart';
-import 'package:microirrigation/Home.dart';
+import 'package:microirrigation/Screen/Home.dart';
 import 'package:microirrigation/Register.dart';
 import 'package:microirrigation/constants/Loading.dart';
 import 'package:provider/provider.dart';
@@ -172,6 +172,7 @@ class _LoginState extends State<Login> {
                                 //   if (isSuccess.toString() == "Signed up") {
                                 //     Navigator.pushReplacementNamed(context, '/Home');
                                 //     BotToast.showSimpleNotification(
+
                                 //       title: " Welcome! ",
                                 //       backgroundColor: Colors.orangeAccent,
                                 //     );
