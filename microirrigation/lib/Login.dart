@@ -41,6 +41,7 @@ class _LoginState extends State<Login> {
                                 color: Colors.black,
                                 fontSize: 70,
                                 fontStyle: FontStyle.normal,
+                                fontFamily: 'LobsterTwo',
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
