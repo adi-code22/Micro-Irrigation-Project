@@ -326,6 +326,10 @@ class _CropDState extends State<CropD> {
       double l = sharedPreferences.getDouble('l');
       double b = sharedPreferences.getDouble('b');
 
+      //To Shared
+
+      sharedPreferences.setDouble('_7', __7);
+
       //To DB;
 
       double _d3 = __7 * __8;

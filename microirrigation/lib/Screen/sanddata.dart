@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 class SandD extends StatefulWidget {
@@ -8,6 +10,7 @@ class SandD extends StatefulWidget {
 
 class _SandDState extends State<SandD> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  String _15, _16, _17, _18, _19, _20, _21;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +31,7 @@ class _SandDState extends State<SandD> {
                     Padding(
                       padding: new EdgeInsets.all(20.0.sp),
                       child: Text(
-                        "Land Data",
+                        "Soil Data",
                         style: TextStyle(
                             fontSize: 20.0.sp, fontFamily: "LobsterTwo"),
                       ),
@@ -40,7 +43,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _15 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -74,7 +79,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _16 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -108,7 +115,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _17 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -142,7 +151,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _18 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -175,7 +186,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _19 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -208,7 +221,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _20 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -241,7 +256,9 @@ class _SandDState extends State<SandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _21 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -270,7 +287,9 @@ class _SandDState extends State<SandD> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          validateAndSave();
+                        },
                         child: Text("SUBMIT Sand Data"),
                       ),
                     )
@@ -282,5 +301,41 @@ class _SandDState extends State<SandD> {
         ),
       ),
     );
+  }
+
+  validateAndSave() async {
+    final form = formkey.currentState;
+    if (form.validate()) {
+      form.save();
+
+      print('$_16,$_16,$_17,$_18,$_19,$_20,$_21,');
+
+      double __15 = double.parse(_15);
+      double __16 = double.parse(_16);
+      double __17 = double.parse(_17);
+      double __18 = double.parse(_18);
+      double __19 = double.parse(_19);
+      double __20 = double.parse(_20);
+      double __21 = double.parse(_21);
+      //save
+      SharedPreferences sharedPreferences =
+          await SharedPreferences.getInstance();
+      sharedPreferences.setDouble("_15", __15);
+      sharedPreferences.setDouble("_16", __16);
+      sharedPreferences.setDouble("_17", __17);
+      sharedPreferences.setDouble("_18", __18);
+      sharedPreferences.setDouble("_19", __19);
+      sharedPreferences.setDouble("_20", __20);
+      sharedPreferences.setDouble("_21", __21);
+
+      //to DB;
+
+      //adding to DB;
+
+      return true;
+    } else {
+      print("Form invalid");
+      return false;
+    }
   }
 }
