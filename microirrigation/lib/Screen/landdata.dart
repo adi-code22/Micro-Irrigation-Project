@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 class LandD extends StatefulWidget {
@@ -208,7 +209,7 @@ class _LandDState extends State<LandD> {
     );
   }
 
-  validateAndSave() {
+  validateAndSave() async {
     final form = formkey.currentState;
     if (form.validate()) {
       form.save();
@@ -220,9 +221,26 @@ class _LandDState extends State<LandD> {
       double slope = double.parse(_l);
       double location = double.parse(_l);
 
-      double _2 = l * b;
+      //save
+      SharedPreferences sharedPreferences =
+          await SharedPreferences.getInstance();
+      sharedPreferences.setDouble("l", l);
 
-      // _2 to db
+      sharedPreferences.setDouble("b", b);
+      sharedPreferences.setDouble("slope", slope);
+      sharedPreferences.setDouble("location", location);
+
+      //to DB;
+      double _d2 = l * b;
+
+      //adding to DB;
+
+      await FirebaseFirestore.instance
+          .collection("collectionPath")
+          .doc("Hi")
+          .set({
+        "_d2": _d2,
+      }).then((value) => Navigator.pop(context));
 
       return true;
     } else {

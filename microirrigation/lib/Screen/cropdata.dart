@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 class CropD extends StatefulWidget {
@@ -8,6 +10,7 @@ class CropD extends StatefulWidget {
 
 class _CropDState extends State<CropD> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  String _7, _8, _9, _10, _11, _12, _13;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +43,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _7 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -74,7 +79,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _8 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -109,7 +116,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _9 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -143,7 +152,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _10 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -176,7 +187,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _11 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -209,7 +222,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _12 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -242,7 +257,9 @@ class _CropDState extends State<CropD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _13 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -271,7 +288,9 @@ class _CropDState extends State<CropD> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          validateAndSave();
+                        },
                         child: Text("SUBMIT Crop Data"),
                       ),
                     )
@@ -283,5 +302,53 @@ class _CropDState extends State<CropD> {
         ),
       ),
     );
+  }
+
+  validateAndSave() async {
+    final form = formkey.currentState;
+    if (form.validate()) {
+      form.save();
+
+      print('$_7,$_8,$_9,$_10,$_11,$_12,$_13,');
+
+      double __7 = double.parse(_7);
+      double __8 = double.parse(_8);
+      double __9 = double.parse(_9);
+      double __10 = double.parse(_10);
+      double __11 = double.parse(_11);
+      double __12 = double.parse(_12);
+      double __13 = double.parse(_13);
+
+      //fetch shared
+
+      SharedPreferences sharedPreferences =
+          await SharedPreferences.getInstance();
+      double l = sharedPreferences.getDouble('l');
+      double b = sharedPreferences.getDouble('b');
+
+      //To DB;
+
+      double _d3 = __7 * __8;
+      double _d4 = l / __7;
+      double _d5 = b / __8;
+      double _d6 = _d4 * _d5;
+
+      //adding to db;
+
+      await FirebaseFirestore.instance
+          .collection("collectionPath")
+          .doc("Hi")
+          .set({
+        "_d3": _d3,
+        "_d4": _d4,
+        "_d5": _d5,
+        "_d6": _d6,
+      }).then((value) => Navigator.pop(context));
+
+      return true;
+    } else {
+      print("Form invalid");
+      return false;
+    }
   }
 }
