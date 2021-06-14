@@ -8,6 +8,8 @@ class LandD extends StatefulWidget {
 }
 
 class _LandDState extends State<LandD> {
+  String _l, _b, _slope, _location;
+
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,9 @@ class _LandDState extends State<LandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _l = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -83,7 +87,9 @@ class _LandDState extends State<LandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _b = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -118,7 +124,9 @@ class _LandDState extends State<LandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _slope = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -153,7 +161,9 @@ class _LandDState extends State<LandD> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _location = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -183,11 +193,7 @@ class _LandDState extends State<LandD> {
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
                         onPressed: () {
-                          if (formkey.currentState.validate()) {
-                            firebaseFirestore
-                                .doc('CropD')
-                                .set({'lengthl': _tf1.text});
-                          }
+                          validateAndSave();
                         },
                         child: Text("SUBMIT Land Data"),
                       ),
@@ -200,5 +206,28 @@ class _LandDState extends State<LandD> {
         ),
       ),
     );
+  }
+
+  validateAndSave() {
+    final form = formkey.currentState;
+    if (form.validate()) {
+      form.save();
+
+      print('$_l,$_b,$_slope,$_location');
+
+      double l = double.parse(_l);
+      double b = double.parse(_l);
+      double slope = double.parse(_l);
+      double location = double.parse(_l);
+
+      double _2 = l * b;
+
+      // _2 to db
+
+      return true;
+    } else {
+      print("Form invalid");
+      return false;
+    }
   }
 }
