@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
@@ -10,6 +11,12 @@ class _LandDState extends State<LandD> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
+    TextEditingController _tf1;
+    TextEditingController _tf2;
+    TextEditingController _tf3;
+    TextEditingController _tf4;
+    CollectionReference firebaseFirestore =
+        FirebaseFirestore.instance.collection("emai;");
     return Scaffold(
       body: Form(
         key: formkey,
@@ -36,6 +43,7 @@ class _LandDState extends State<LandD> {
                     Padding(
                       padding: new EdgeInsets.all(10.0.sp),
                       child: TextFormField(
+                        controller: _tf1,
                         validator: (val) =>
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
@@ -70,6 +78,7 @@ class _LandDState extends State<LandD> {
                     Padding(
                       padding: new EdgeInsets.all(10.0.sp),
                       child: TextFormField(
+                        controller: _tf2,
                         validator: (val) =>
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
@@ -104,6 +113,7 @@ class _LandDState extends State<LandD> {
                     Padding(
                       padding: new EdgeInsets.all(10.0.sp),
                       child: TextFormField(
+                        controller: _tf3,
                         validator: (val) =>
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
@@ -138,6 +148,7 @@ class _LandDState extends State<LandD> {
                     Padding(
                       padding: new EdgeInsets.all(10.0.sp),
                       child: TextFormField(
+                        controller: _tf4,
                         validator: (val) =>
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
@@ -171,7 +182,13 @@ class _LandDState extends State<LandD> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          if (formkey.currentState.validate()) {
+                            firebaseFirestore
+                                .doc('CropD')
+                                .set({'lengthl': _tf1.text});
+                          }
+                        },
                         child: Text("SUBMIT Land Data"),
                       ),
                     )
