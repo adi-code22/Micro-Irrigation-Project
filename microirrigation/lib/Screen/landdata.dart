@@ -168,6 +168,13 @@ class _LandDState extends State<LandD> {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("SUBMIT Land Data"),
+                      ),
+                    )
                   ],
                 ),
               ),

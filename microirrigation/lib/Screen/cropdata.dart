@@ -48,7 +48,7 @@ class _CropDState extends State<CropD> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Length of the land(in m)",
+                          labelText: "Row wise distance between Plants(in m)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -82,7 +82,8 @@ class _CropDState extends State<CropD> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Breadth of the land(in m)",
+                          labelText:
+                              "Column wise distance between Plants(in m)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -116,7 +117,7 @@ class _CropDState extends State<CropD> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Slope of the land",
+                          labelText: "Effective root zone depth(in cm)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -149,7 +150,7 @@ class _CropDState extends State<CropD> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Location of water Resource",
+                          labelText: "Bulk density of plant roots(in gcc)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -168,6 +169,112 @@ class _CropDState extends State<CropD> {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: new EdgeInsets.all(10.0.sp),
+                      child: TextFormField(
+                        validator: (val) =>
+                            val.isEmpty //|| !(val.contains('@'))
+                                ? 'Enter a valid value'
+                                : null,
+                        onSaved: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
+                          labelText: "Crop coefficient(in %)",
+                          fillColor: Colors.white,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.black),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: new EdgeInsets.all(10.0.sp),
+                      child: TextFormField(
+                        validator: (val) =>
+                            val.isEmpty //|| !(val.contains('@'))
+                                ? 'Enter a valid value'
+                                : null,
+                        onSaved: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
+                          labelText: "Wilting Point of Plant(in %)",
+                          fillColor: Colors.white,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.black),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: new EdgeInsets.all(10.0.sp),
+                      child: TextFormField(
+                        validator: (val) =>
+                            val.isEmpty //|| !(val.contains('@'))
+                                ? 'Enter a valid value'
+                                : null,
+                        onSaved: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
+                          labelText: "Wettinf Fraction(in %)",
+                          fillColor: Colors.white,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.black),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("SUBMIT Crop Data"),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -48,7 +48,7 @@ class _DesignParaState extends State<DesignPara> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Length of the land(in m)",
+                          labelText: "Constant in Head Loss Reduction Factor",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -82,7 +82,7 @@ class _DesignParaState extends State<DesignPara> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Breadth of the land(in m)",
+                          labelText: "Pressure Required at Emitter(in m)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -116,7 +116,8 @@ class _DesignParaState extends State<DesignPara> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Slope of the land",
+                          labelText:
+                              "Maximum Pressure Variation in Main and Submain(in %)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -149,7 +150,7 @@ class _DesignParaState extends State<DesignPara> {
                           labelStyle: TextStyle(
                             color: Colors.black,
                           ),
-                          labelText: "Location of water Resource",
+                          labelText: "Static Head of Pump(in m)",
                           fillColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20),
@@ -168,6 +169,79 @@ class _DesignParaState extends State<DesignPara> {
                         ),
                       ),
                     ),
+                    Padding(
+                      padding: new EdgeInsets.all(10.0.sp),
+                      child: TextFormField(
+                        validator: (val) =>
+                            val.isEmpty //|| !(val.contains('@'))
+                                ? 'Enter a valid value'
+                                : null,
+                        onSaved: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
+                          labelText: "Maximum Head Loss in Fittings(in %)",
+                          fillColor: Colors.white,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.black),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: new EdgeInsets.all(10.0.sp),
+                      child: TextFormField(
+                        validator: (val) =>
+                            val.isEmpty //|| !(val.contains('@'))
+                                ? 'Enter a valid value'
+                                : null,
+                        onSaved: (value) {},
+                        style: TextStyle(color: Colors.black),
+                        cursorColor: Colors.blue,
+                        decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black,
+                          ),
+                          labelText: "Efficiency of Pump(in %)",
+                          fillColor: Colors.white,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.grey),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide:
+                                BorderSide(width: 1, color: Colors.black),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("SUBMIT Design Parameters"),
+                      ),
+                    )
                   ],
                 ),
               ),
