@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Data {
@@ -46,6 +47,15 @@ class Data {
     double _d22 = _2 - (_7 / 2);
     double _d24 = _d5 * 2;
     double _d25 = _d24 * _d22;
+
+    await FirebaseFirestore.instance.collection("collectionPath").doc("Hi").set({
+      "_d2": _d2,
+      "_d3": _d3,
+      "_d4": _d4,
+      "_d5": _d5,
+      "_d6": _d6,
+      
+    });
 
     print(_d16);
     print("REACHEFJKJFKFDKFDKF");
