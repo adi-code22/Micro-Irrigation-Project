@@ -326,6 +326,7 @@ class _CropDState extends State<CropD> {
       double l = sharedPreferences.getDouble('l');
       double b = sharedPreferences.getDouble('b');
 
+      double _d2 = sharedPreferences.getDouble('_d2');
       //To Shared
 
       sharedPreferences.setDouble('_7', __7);
@@ -343,6 +344,7 @@ class _CropDState extends State<CropD> {
           .collection("collectionPath")
           .doc("Hi")
           .set({
+        "_d2": _d2,
         "_d3": _d3,
         "_d4": _d4,
         "_d5": _d5,
