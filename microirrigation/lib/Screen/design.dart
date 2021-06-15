@@ -10,7 +10,10 @@ class Design extends StatefulWidget {
 class _DesignState extends State<Design> {
   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
-  var _textStyleRed = TextStyle(color: Colors.red);
+  var _textStyleRed = TextStyle(
+      color: Colors.red, fontSize: 7.0.sp, fontWeight: FontWeight.bold);
+  var _textStyleHeadin = TextStyle(
+      color: Colors.black, fontSize: 7.0.sp, fontWeight: FontWeight.bold);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,13 +45,14 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Area of land in m^2: ",
-                        ),
-                        Text("Area covered by a single plant in m^2:  "),
-                        Text("No. of crops in a Row:  "),
-                        Text("No. of Columns of Crops:  "),
-                        Text("Total no. of Crops:  "),
+                        Text("Area of land in m^2: ", style: _textStyleHeadin),
+                        Text("Area covered by a single plant in m^2:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of crops in a Row:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of Columns of Crops:  ",
+                            style: _textStyleHeadin),
+                        Text("Total no. of Crops:  ", style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -94,8 +98,10 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Volume of Water Required per Plant in L/H:  "),
-                        Text("Total Hours of Irrigation :  "),
+                        Text("Volume of Water Required per Plant in L/H:  ",
+                            style: _textStyleHeadin),
+                        Text("Total Hours of Irrigation :  ",
+                            style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -132,10 +138,13 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Emitter Type:  "),
-                        Text("Emitter Capacity in L/H:  "),
-                        Text("No. of Emitters per Plant:  "),
-                        Text("Total No. of Emitters:  "),
+                        Text("Emitter Type:  ", style: _textStyleHeadin),
+                        Text("Emitter Capacity in L/H:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of Emitters per Plant:  ",
+                            style: _textStyleHeadin),
+                        Text("Total No. of Emitters:  ",
+                            style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -181,16 +190,26 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Length of Main Pipe in m:  "),
-                        Text("Diameter of Main Pipe in mm:  "),
-                        Text("Total Length of Main Pipe Required in m:  "),
-                        Text("Length of Submain Pipe in m:  "),
-                        Text("Diameter of Submain Pipe in mm:  "),
-                        Text("Total Length of Submain Pipe Required in m:  "),
-                        Text("Length of Single Lateral Pipe in m:  "),
-                        Text("Diameter of Lateral Pipe in mm:  "),
-                        Text("No. of Lateral Pipe Required:  "),
-                        Text("Total Length of Lateral Pipes Required in m:  "),
+                        Text("Length of Main Pipe in m:  ",
+                            style: _textStyleHeadin),
+                        Text("Diameter of Main Pipe in mm:  ",
+                            style: _textStyleHeadin),
+                        Text("Total Length of Main Pipe Required in m:  ",
+                            style: _textStyleHeadin),
+                        Text("Length of Submain Pipe in m:  ",
+                            style: _textStyleHeadin),
+                        Text("Diameter of Submain Pipe in mm:  ",
+                            style: _textStyleHeadin),
+                        Text("Total Length of Submain Pipe Required in m:  ",
+                            style: _textStyleHeadin),
+                        Text("Length of Single Lateral Pipe in m:  ",
+                            style: _textStyleHeadin),
+                        Text("Diameter of Lateral Pipe in mm:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of Lateral Pipe Required:  ",
+                            style: _textStyleHeadin),
+                        Text("Total Length of Lateral Pipes Required in m:  ",
+                            style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -260,7 +279,8 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("HP Capacity of Motor Pump Required:  "),
+                        Text("HP Capacity of Motor Pump Required:  ",
+                            style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -294,12 +314,17 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Fertilizer Requirement:  "),
-                        Text("Amount of Fertilizer per Setting in kg:  "),
-                        Text("Fertilizer Concentration in ppm:  "),
-                        Text("Fertilizer Injection Rate in L/H:  "),
-                        Text("Fertigation Tank Capacity in L:  "),
-                        Text("Fertigation Method:  "),
+                        Text("Fertilizer Requirement:  ",
+                            style: _textStyleHeadin),
+                        Text("Amount of Fertilizer per Setting in kg:  ",
+                            style: _textStyleHeadin),
+                        Text("Fertilizer Concentration in ppm:  ",
+                            style: _textStyleHeadin),
+                        Text("Fertilizer Injection Rate in L/H:  ",
+                            style: _textStyleHeadin),
+                        Text("Fertigation Tank Capacity in L:  ",
+                            style: _textStyleHeadin),
+                        Text("Fertigation Method:  ", style: _textStyleHeadin),
                       ],
                     ),
                     Column(
@@ -392,28 +417,43 @@ class _DesignState extends State<Design> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("No. of Solenoid Valves Required:  "),
-                        Text(
-                            "Hydraulic Valve Operated with Solenoid Valves:  "),
-                        Text("Metering Valves at Main Pipe:  "),
-                        Text("Metering Valves at Submain Pipe:  "),
-                        Text("Metering Valves at Lateral Pipes:  "),
-                        Text("Total Metering Valves Required:  "),
-                        Text("Metering Pumps for Fertigation:  "),
-                        Text("Flow Transducers:  "),
-                        Text("Water Moisture Sensors:  "),
-                        Text("Tensiometers:  "),
-                        Text("Infrared Sensors:  "),
-                        Text("Relays Required:  "),
-                        Text("No. of PLCs:  "),
-                        Text("Capacity of I/O Modules:  "),
-                        Text("Total No. of I/O Modules Required:  "),
-                        Text("Timer Counter Modules Required:  "),
-                        Text("Capacity of IoT Modules:  "),
-                        Text("No. of PLC Power Supply Module:  "),
-                        Text("No. of Server Computers:  "),
-                        Text("No. of Client Computers:  "),
-                        Text("Communication Infrastructure:  "),
+                        Text("No. of Solenoid Valves Required:  ",
+                            style: _textStyleHeadin),
+                        Text("Hydraulic Valve Operated with Solenoid Valves:  ",
+                            style: _textStyleHeadin),
+                        Text("Metering Valves at Main Pipe:  ",
+                            style: _textStyleHeadin),
+                        Text("Metering Valves at Submain Pipe:  ",
+                            style: _textStyleHeadin),
+                        Text("Metering Valves at Lateral Pipes:  ",
+                            style: _textStyleHeadin),
+                        Text("Total Metering Valves Required:  ",
+                            style: _textStyleHeadin),
+                        Text("Metering Pumps for Fertigation:  ",
+                            style: _textStyleHeadin),
+                        Text("Flow Transducers:  ", style: _textStyleHeadin),
+                        Text("Water Moisture Sensors:  ",
+                            style: _textStyleHeadin),
+                        Text("Tensiometers:  ", style: _textStyleHeadin),
+                        Text("Infrared Sensors:  ", style: _textStyleHeadin),
+                        Text("Relays Required:  ", style: _textStyleHeadin),
+                        Text("No. of PLCs:  ", style: _textStyleHeadin),
+                        Text("Capacity of I/O Modules:  ",
+                            style: _textStyleHeadin),
+                        Text("Total No. of I/O Modules Required:  ",
+                            style: _textStyleHeadin),
+                        Text("Timer Counter Modules Required:  ",
+                            style: _textStyleHeadin),
+                        Text("Capacity of IoT Modules:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of PLC Power Supply Module:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of Server Computers:  ",
+                            style: _textStyleHeadin),
+                        Text("No. of Client Computers:  ",
+                            style: _textStyleHeadin),
+                        Text("Communication Infrastructure:  ",
+                            style: _textStyleHeadin),
                       ],
                     ),
                     Column(
