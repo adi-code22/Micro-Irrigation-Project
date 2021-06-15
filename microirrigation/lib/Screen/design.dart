@@ -59,23 +59,23 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d2"].toString(),
+                          snapshot.data["_d2"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d3"].toString(),
+                          snapshot.data["_d3"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d4"].toString(),
+                          snapshot.data["_d4"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d5"].toString(),
+                          snapshot.data["_d5"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d6"].toString(),
+                          snapshot.data["_d6"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                       ],
@@ -108,11 +108,11 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d8"].toString(),
+                          snapshot.data["_d8"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d9"].toString(),
+                          snapshot.data["_d9"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                       ],
@@ -151,19 +151,20 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d11"].toString(),
+                          //snapshot.data["_d11"].toString()??
+                          "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d12"].toString(),
+                          snapshot.data["_d12"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d13"].toString(),
+                          snapshot.data["_d13"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d14"].toString(),
+                          snapshot.data["_d14"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                       ],
@@ -216,43 +217,43 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d16"].toString(),
+                          snapshot.data["_d16"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d17"].toString(),
+                          snapshot.data["_d17"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d18"].toString(),
+                          snapshot.data["_d18"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d19"].toString(),
+                          snapshot.data["_d19"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d20"].toString(),
+                          snapshot.data["_d20"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d21"].toString(),
+                          snapshot.data["_d21"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d22"].toString(),
+                          snapshot.data["_d22"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d23"].toString(),
+                          snapshot.data["_d23"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d24"].toString(),
+                          snapshot.data["_d24"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d25"].toString(),
+                          snapshot.data["_d25"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                       ],
@@ -287,7 +288,7 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d27"].toString(),
+                          snapshot.data["_d27"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                       ],
@@ -460,27 +461,27 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d39"].toString(),
+                          snapshot.data["_d39"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d40"].toString(),
+                          snapshot.data["_d40"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d41"].toString(),
+                          snapshot.data["_d41"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d42"].toString(),
+                          snapshot.data["_d42"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d43"].toString(),
+                          snapshot.data["_d43"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d44"].toString(),
+                          snapshot.data["_d44"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
@@ -488,19 +489,19 @@ class _DesignState extends State<Design> {
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d46"].toString(),
+                          snapshot.data["_d46"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d47"].toString(),
+                          snapshot.data["_d47"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d48"].toString(),
+                          snapshot.data["_d48"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["_d49"].toString(),
+                          snapshot.data["_d49"].toString() ?? "0",
                           style: _textStyleRed,
                         ),
                         Text(
