@@ -387,11 +387,11 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "snull",
                           style: _textStyleRed,
                         ),
                       ],
@@ -505,43 +505,43 @@ class _DesignState extends State<Design> {
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                       ],
