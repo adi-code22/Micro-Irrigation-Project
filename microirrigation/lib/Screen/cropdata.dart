@@ -323,9 +323,17 @@ class _CropDState extends State<CropD> {
 
       SharedPreferences sharedPreferences =
           await SharedPreferences.getInstance();
+
+      sharedPreferences.setDouble("_7", __7);
+      sharedPreferences.setDouble("_8", __8);
+      sharedPreferences.setDouble("_9", __9);
+      sharedPreferences.setDouble("_10", __10);
+      sharedPreferences.setDouble("_11", __11);
+      sharedPreferences.setDouble("_12", __12);
+      sharedPreferences.setDouble("_13", __13);
+
       double l = sharedPreferences.getDouble('l');
       double b = sharedPreferences.getDouble('b');
-
       double _d2 = sharedPreferences.getDouble('_d2');
       //To Shared
 

@@ -309,7 +309,7 @@ class _SandDState extends State<SandD> {
     if (form.validate()) {
       form.save();
 
-      print('$_16,$_16,$_17,$_18,$_19,$_20,$_21,');
+      print('$_15,$_16,$_17,$_18,$_19,$_20,$_21,');
 
       double __15 = double.parse(_15);
       double __16 = double.parse(_16);
