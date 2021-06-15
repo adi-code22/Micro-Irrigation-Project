@@ -34,36 +34,88 @@ class _InputState extends State<Input> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'landdata');
-                          },
-                          child: Text("Land Data")),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.black,
+                                padding: EdgeInsets.only(
+                                    top: 25,
+                                    bottom: 25,
+                                    left: 150,
+                                    right: 150)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'landdata');
+                            },
+                            child: Text(
+                              "Land Data",
+                              style: TextStyle(fontSize: 8.0.sp),
+                            )),
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'cropdata');
-                          },
-                          child: Text("Crop Data")),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.black,
+                                padding: EdgeInsets.only(
+                                    top: 25,
+                                    bottom: 25,
+                                    left: 150,
+                                    right: 150)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'cropdata');
+                            },
+                            child: Text(
+                              "Crop Data",
+                              style: TextStyle(fontSize: 8.0.sp),
+                            )),
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'sanddata');
-                          },
-                          child: Text("Sand Data")),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.black,
+                                padding: EdgeInsets.only(
+                                    top: 25,
+                                    bottom: 25,
+                                    left: 150,
+                                    right: 150)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'sanddata');
+                            },
+                            child: Text(
+                              "Sand Data",
+                              style: TextStyle(fontSize: 8.0.sp),
+                            )),
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, 'designpara');
-                          },
-                          child: Text("Design Parameters")),
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.black,
+                                padding: EdgeInsets.only(
+                                    top: 25,
+                                    bottom: 25,
+                                    left: 115,
+                                    right: 115)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'designpara');
+                            },
+                            child: Text(
+                              "Design Parameters",
+                              style: TextStyle(fontSize: 8.0.sp),
+                            )),
+                      ),
                     )
                   ],
                 ),
