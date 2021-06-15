@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
 class DesignPara extends StatefulWidget {
@@ -8,6 +9,7 @@ class DesignPara extends StatefulWidget {
 
 class _DesignParaState extends State<DesignPara> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
+  String _23, _24, _25, _26, _27, _28;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -255,5 +257,38 @@ class _DesignParaState extends State<DesignPara> {
     );
   }
 
-  void validateAndSave() {}
+  validateAndSave() async {
+    final form = formkey.currentState;
+    if (form.validate()) {
+      form.save();
+
+      print('$_23,$_24,$_25,$_26,$_27,$_28');
+
+      double __23 = double.parse(_23);
+      double __24 = double.parse(_24);
+      double __25 = double.parse(_25);
+      double __26 = double.parse(_26);
+      double __27 = double.parse(_27);
+      double __28 = double.parse(_28);
+
+      //save
+      SharedPreferences sharedPreferences =
+          await SharedPreferences.getInstance();
+      sharedPreferences.setDouble("_23", __23);
+      sharedPreferences.setDouble("_24", __24);
+      sharedPreferences.setDouble("_25", __25);
+      sharedPreferences.setDouble("_26", __26);
+      sharedPreferences.setDouble("_27", __27);
+      sharedPreferences.setDouble("_28", __28);
+
+      //to DB;
+
+      //adding to DB;
+
+      return true;
+    } else {
+      print("Form invalid");
+      return false;
+    }
+  }
 }
