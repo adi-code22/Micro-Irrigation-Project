@@ -38,10 +38,22 @@ class _RegisterState extends State<Register> {
                         Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Lorem Ipsum",
+                            "Micro Irrigation",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 70,
+                                fontFamily: 'LobsterTwo',
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Christ College of Engineering, Irinjalakuda",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
                                 fontFamily: 'LobsterTwo',
                                 fontStyle: FontStyle.normal,
                                 fontWeight: FontWeight.bold),

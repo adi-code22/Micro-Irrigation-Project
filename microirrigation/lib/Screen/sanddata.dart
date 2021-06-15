@@ -287,6 +287,10 @@ class _SandDState extends State<SandD> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.black,
+                            padding: EdgeInsets.only(
+                                top: 25, bottom: 25, left: 150, right: 150)),
                         onPressed: () {
                           validateAndSave();
                           Navigator.pop(context);
