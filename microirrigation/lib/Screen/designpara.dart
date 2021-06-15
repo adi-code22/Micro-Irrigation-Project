@@ -281,6 +281,12 @@ class _DesignParaState extends State<DesignPara> {
       sharedPreferences.setDouble("_27", __27);
       sharedPreferences.setDouble("_28", __28);
 
+      //fetch shared
+      double l = sharedPreferences.getDouble("l");
+
+      //piping logic
+      double _d16 = l / 2;
+      // --> double _d17 =
       //to DB;
 
       //adding to DB;
