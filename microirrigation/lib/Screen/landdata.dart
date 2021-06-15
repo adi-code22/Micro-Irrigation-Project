@@ -195,6 +195,7 @@ class _LandDState extends State<LandD> {
                       child: ElevatedButton(
                         onPressed: () {
                           validateAndSave();
+                          Navigator.pop(context);
                         },
                         child: Text("SUBMIT Land Data"),
                       ),
