@@ -217,36 +217,18 @@ class _LandDState extends State<LandD> {
 
       print('dfdfdfd$_l,$_b,$_slope,$_location');
 
-      double l = double.parse(_l);
-      double b = double.parse(_b);
-      double slope = double.parse(_slope);
+      double _2 = double.parse(_l);
+      double _3 = double.parse(_b);
+      double _4 = double.parse(_slope);
       //String location = String.parse(_location);
 
       //save
       SharedPreferences sharedPreferences =
           await SharedPreferences.getInstance();
-      sharedPreferences.setDouble("l", l);
-      sharedPreferences.setDouble("b", b);
-      sharedPreferences.setDouble("slope", slope);
+      sharedPreferences.setDouble("_2", _2);
+      sharedPreferences.setDouble("_3", _3);
+      sharedPreferences.setDouble("_4", _4);
       sharedPreferences.setString("location", _location);
-
-      //to DB;
-      double _d2 = l * b;
-
-      //adding to DB;
-      sharedPreferences
-          .setDouble('_d2', _d2)
-          .whenComplete(() => Navigator.pop(context));
-
-      // await FirebaseFirestore.instance
-      //     .collection("collectionPath")
-      //     .doc("Hi")
-      //     .set({
-      //   "_d2": _d2,
-      // }).then((value) {
-      //   Navigator.pop(context);
-      //   print("Success");
-      // });
 
       return true;
     } else {
