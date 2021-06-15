@@ -108,11 +108,11 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d8"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d9"].toString(),
                           style: _textStyleRed,
                         ),
                       ],
@@ -151,19 +151,19 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d11"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d12"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d13"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d14"].toString(),
                           style: _textStyleRed,
                         ),
                       ],
@@ -216,43 +216,43 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d16"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d17"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d18"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d19"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d20"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d21"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d22"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d23"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d24"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d25"].toString(),
                           style: _textStyleRed,
                         ),
                       ],
@@ -287,7 +287,7 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d27"].toString(),
                           style: _textStyleRed,
                         ),
                       ],
@@ -331,27 +331,27 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d29"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                       ],
@@ -460,47 +460,47 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d39"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d40"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d41"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d42"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d43"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d44"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d46"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d47"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d48"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d49"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
