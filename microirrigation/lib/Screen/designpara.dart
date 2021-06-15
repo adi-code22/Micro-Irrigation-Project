@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:microirrigation/data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 
@@ -42,7 +43,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _23 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -76,7 +79,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _24 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -110,7 +115,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _25 = value;
+                        },
                         keyboardType: TextInputType.number,
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
@@ -145,7 +152,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _26 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -178,7 +187,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _27 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -211,7 +222,9 @@ class _DesignParaState extends State<DesignPara> {
                             val.isEmpty //|| !(val.contains('@'))
                                 ? 'Enter a valid value'
                                 : null,
-                        onSaved: (value) {},
+                        onSaved: (value) {
+                          _28 = value;
+                        },
                         style: TextStyle(color: Colors.black),
                         cursorColor: Colors.blue,
                         decoration: InputDecoration(
@@ -290,6 +303,8 @@ class _DesignParaState extends State<DesignPara> {
       //to DB;
 
       //adding to DB;
+      Data data = new Data();
+      data.submitData();
 
       return true;
     } else {

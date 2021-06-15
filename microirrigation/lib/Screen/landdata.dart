@@ -236,7 +236,8 @@ class _LandDState extends State<LandD> {
       //adding to DB;
       sharedPreferences
           .setDouble('_d2', _d2)
-          .then((value) => Navigator.pop(context));
+          .whenComplete(() => Navigator.pop(context));
+
       // await FirebaseFirestore.instance
       //     .collection("collectionPath")
       //     .doc("Hi")
