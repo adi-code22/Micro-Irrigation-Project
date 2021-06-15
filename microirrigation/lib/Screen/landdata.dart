@@ -220,16 +220,15 @@ class _LandDState extends State<LandD> {
       double l = double.parse(_l);
       double b = double.parse(_b);
       double slope = double.parse(_slope);
-      double location = double.parse(_location);
+      //String location = String.parse(_location);
 
       //save
       SharedPreferences sharedPreferences =
           await SharedPreferences.getInstance();
       sharedPreferences.setDouble("l", l);
-
       sharedPreferences.setDouble("b", b);
       sharedPreferences.setDouble("slope", slope);
-      sharedPreferences.setDouble("location", location);
+      sharedPreferences.setString("location", _location);
 
       //to DB;
       double _d2 = l * b;

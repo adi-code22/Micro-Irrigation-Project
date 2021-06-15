@@ -238,7 +238,10 @@ class _DesignParaState extends State<DesignPara> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          validateAndSave();
+                          Navigator.pop(context);
+                        },
                         child: Text("SUBMIT Design Parameters"),
                       ),
                     )
@@ -251,4 +254,6 @@ class _DesignParaState extends State<DesignPara> {
       ),
     );
   }
+
+  void validateAndSave() {}
 }

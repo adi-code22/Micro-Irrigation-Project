@@ -289,6 +289,7 @@ class _SandDState extends State<SandD> {
                       child: ElevatedButton(
                         onPressed: () {
                           validateAndSave();
+                          Navigator.pop(context);
                         },
                         child: Text("SUBMIT Sand Data"),
                       ),
