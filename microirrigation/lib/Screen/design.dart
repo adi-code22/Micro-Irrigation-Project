@@ -16,12 +16,14 @@ class _DesignState extends State<Design> {
     return Scaffold(
       body: SingleChildScrollView(
         child: StreamBuilder<DocumentSnapshot>(
-          stream:
-              firebaseFirestore.collection("email").doc('CropD').snapshots(),
+          stream: firebaseFirestore
+              .collection("collectionPath")
+              .doc('Hi')
+              .snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
-            double test = snapshot.data["siltc"];
-            print(test);
+            // double test = snapshot.data["siltc"];
+            // print(test);
             return Column(
               children: [
                 Center(
@@ -53,23 +55,23 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["lengthl"].toString(),
+                          snapshot.data["_d2"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.data.toString()",
+                          snapshot.data["_d3"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["rowd"].toString(),
+                          snapshot.data["_d4"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          snapshot.data["columnd"].toString(),
+                          snapshot.data["_d5"].toString(),
                           style: _textStyleRed,
                         ),
                         Text(
-                          "snapshot.toString()",
+                          snapshot.data["_d6"].toString(),
                           style: _textStyleRed,
                         ),
                       ],
@@ -100,7 +102,7 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["lengthl"].toString(),
+                          "snapshot.data.toString()",
                           style: _textStyleRed,
                         ),
                         Text(
