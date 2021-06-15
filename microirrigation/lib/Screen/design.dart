@@ -331,7 +331,7 @@ class _DesignState extends State<Design> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          snapshot.data["_d29"].toString(),
+                          "null",
                           style: _textStyleRed,
                         ),
                         Text(
