@@ -246,6 +246,8 @@ class _LandDState extends State<LandD> {
       //   print("Success");
       // });
 
+      Navigator.pop(context);
+
       return true;
     } else {
       print("Form invalid");
