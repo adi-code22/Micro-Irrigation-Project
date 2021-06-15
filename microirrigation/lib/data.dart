@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Data {
@@ -184,7 +185,7 @@ class Data {
     double _d6 = s5;
     double _d8 = s7;
     double _d9 = s13;
-    double _d11 = s8;
+    // double _d11 = s8;
     double _d12 = s9;
     double _d13 = s10;
     double _d14 = s11;
@@ -209,6 +210,43 @@ class Data {
     double _d47 = s5;
     double _d48 = s5;
     double _d49 = s17;
+
+    await FirebaseFirestore.instance
+        .collection("collectionPath")
+        .doc("Hi")
+        .set({
+      "_d2": _d2,
+      "_d3": _d3,
+      "_d4": _d4,
+      "_d5": _d5,
+      "_d6": _d6,
+      "_d8": _d8,
+      "_d9": _d9,
+      "_d12": _d12,
+      "_d13": _d13,
+      "_d14": _d14,
+      "_d16": _d16,
+      "_d17": _d17,
+      "_d18": _d18,
+      "_d19": _d19,
+      "_d20": _d20,
+      "_d21": _d21,
+      "_d22": _d22,
+      "_d23": _d23,
+      "_d24": _d24,
+      "_d25": _d25,
+      "_d27": _d27,
+      "_d39": _d39,
+      "_d40": _d40,
+      "_d41": _d41,
+      "_d42": _d42,
+      "_d43": _d43,
+      "_d44": _d44,
+      "_d46": _d46,
+      "_d47": _d47,
+      "_d48": _d48,
+      "_d49": _d49,
+    });
 
     print("REACHEFJKJFKFDKFDKF");
     // print("_2 Data is here: " + _23.toString());
